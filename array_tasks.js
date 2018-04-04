@@ -47,12 +47,18 @@ var arrayTasks = {
 	},
 
 	removeAndClone: function (arr, valueToRemove) {
-
+		return arr.filter(function(element){
+				return element !== valueToRemove;
+		});
 	},
 
-	// findIndexesOf: function (arr, itemToFind) {
-
-	// },
+	findIndexesOf: function (arr, itemToFind) {
+		var indexes = [];
+    for(i = 0; i < arr.length; i++)
+        if (arr[i] === itemToFind)
+            indexes.push(i);
+    return indexes;
+}
 
 	// sumOfAllEvenNumbersSquared: function (arr) {
 
