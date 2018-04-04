@@ -1,7 +1,7 @@
 var arrayTasks = {
 
 	concat: function (arr1, arr2) {
-		newArray = [];
+		let newArray = [];
 		for (element of arr1){
 			newArray.push(element);
 		}
@@ -26,7 +26,7 @@ var arrayTasks = {
 	},
 
 	sum: function (arr) {
-		total = 0
+		let total = 0
 		for(let element of arr){
 			total += element;
 		}
@@ -53,16 +53,26 @@ var arrayTasks = {
 	},
 
 	findIndexesOf: function (arr, itemToFind) {
-		var indexes = [];
+		let indexes = [];
     for(i = 0; i < arr.length; i++)
         if (arr[i] === itemToFind)
             indexes.push(i);
     return indexes;
-}
+	},
 
-	// sumOfAllEvenNumbersSquared: function (arr) {
 
-	// }
+	sumOfAllEvenNumbersSquared: function (arr) {
+		evens = [];
+		arr.forEach(function(element) {
+	    if (element % 2 === 0 ){
+				evens.push(element);
+	    }
+	  });
+		evens.forEach(function(element){
+			sum = Math.pow(element, 2);
+		});
+		return sum;
+	},
 
 }
 
