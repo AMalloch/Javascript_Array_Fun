@@ -34,12 +34,21 @@ var arrayTasks = {
 	},
 
 	findDuplicates: function (arr) {
+		let duplicates = [];
 
+	  arr.forEach(function(element, index) {
+	    if (arr.indexOf(element, index + 1) > -1) {
+	      if (duplicates.indexOf(element) === -1) {
+	        duplicates.push(element);
+	      }
+	    }
+	  });
+	  return duplicates;
 	},
 
-	// removeAndClone: function (arr, valueToRemove) {
+	removeAndClone: function (arr, valueToRemove) {
 
-	// },
+	},
 
 	// findIndexesOf: function (arr, itemToFind) {
 
