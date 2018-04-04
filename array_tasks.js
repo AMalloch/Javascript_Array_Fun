@@ -60,19 +60,20 @@ var arrayTasks = {
     return indexes;
 	},
 
-
 	sumOfAllEvenNumbersSquared: function (arr) {
-		evens = [];
+		let evens = [];
+		let total = 0;
 		arr.forEach(function(element) {
-	    if (element % 2 === 0 ){
+			if (element % 2 === 0 ){
 				evens.push(element);
-	    }
-	  });
-		evens.forEach(function(element){
-			sum = Math.pow(element, 2);
+			}
 		});
-		return sum;
-	},
+		for (element of evens ) {
+		 	let square = Math.pow(element, 2);
+		 	total = total + square;
+	 }
+	 	return total;
+	}
 
 }
 
