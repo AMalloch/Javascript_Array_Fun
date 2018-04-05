@@ -1,14 +1,18 @@
 var arrayTasks = {
 
 	concat: function (arr1, arr2) {
-		let newArray = [];
-		for (element of arr1){
-			newArray.push(element);
-		}
-		for (element of arr2){
-			newArray.push(element);
-		}
-		return newArray;
+		// let newArray = [];
+		// for (element of arr1){
+		// 	newArray.push(element);
+		// }
+		// for (element of arr2){
+		// 	newArray.push(element);
+		// }
+		// return newArray;
+
+		let joinedArray = arr1.concat(arr2);
+
+		return joinedArray;
 	},
 
 // should insert an item in an array at any index position
